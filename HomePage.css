@@ -1,0 +1,175 @@
+html {
+  cursor: none;
+  scroll-behavior: smooth;
+}
+
+.HomePage {
+  margin-top: 0;
+  padding: 0;
+  box-sizing: border-box;
+  top: 0;
+  height: 100%;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  cursor: none;
+}
+
+.header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  /* Align items horizontally */
+  justify-content: space-between;
+  /* Distribute space between items */
+  align-items: center;
+  /* Vertically align items in the center */
+  position: absolute;
+  left: 0;
+  /* This pushes the main content to the absolute left */
+  top: 40%;
+  /* Vertically center the content */
+  transform: translateY(-50%);
+  /* Ensure the content is perfectly centered vertically */
+  padding: 20px;
+  /* Optional: Add some padding */
+}
+
+.content {
+  max-width: 50%;
+  /* Restrict the width of the text content */
+}
+
+.logoImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: auto;
+}
+
+.laptopImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
+  height: auto;
+  position: relative; /* Ensure positioning context */
+  z-index: 1; /* Set a lower z-index */
+}
+
+.menu-btn {
+  position: absolute; /* Ensure it is positioned absolutely */
+  top: 20px; /* Adjust top positioning */
+left: 1100px;
+  width: 100px;
+  height: auto;
+  background-color: black;
+  color: white;
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Optional: Add border-radius for rounded corners */
+  padding: 10px; /* Add padding for better appearance */
+  cursor: none; /* Add pointer cursor */
+  font-size: 16px; /* Adjust font size as needed */
+  z-index: 2; /* Set a higher z-index */
+}
+
+
+.title {
+  font-size: 46px;
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
+
+.weAre {
+  font-size: 15px;
+  line-height: 24px;
+  min-height: 48px;
+  letter-spacing: 4px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 100px;
+}
+
+.description {
+  margin: 30px 0;
+  font-size: 16px;
+  line-height: 25px;
+  min-height: 50px;
+  letter-spacing: 0;
+  color: #fff;
+  opacity: .8;
+}
+
+#invertedcursor {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 2;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  transition: width 0.2s ease, height 0.2s ease, transform 0.2s ease;
+}
+
+.hovered #invertedcursor {
+  width: 40px;
+  height: 40px;
+}
+
+.gtkuBtn:hover,
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+.gtkuBtn {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  transition: background-color 0.25s ease 0.35s, color 0.25s ease 0.35s;
+  cursor: none;
+
+  /* background: linear-gradient(to right, black 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    transition: background-position 0.5s ease; */
+}
+
+.gtkuBtn:hover {
+  background-color: white;
+  color: black;
+
+  /* background-position: left bottom;
+    background-color: white;
+    color: black; */
+}
+
+
+.menu-btn:hover {
+  background-color: white;
+  color: black;
+}
+

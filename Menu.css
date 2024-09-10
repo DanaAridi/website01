@@ -1,0 +1,89 @@
+/* Menu.css */
+
+/* General cursor styling for the menu */
+.menu,
+.menu a,
+.menu button {
+  cursor: none; /* Hide default cursor */
+}
+
+#invertedcursor {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 2;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  transition: width 0.2s ease, height 0.2s ease, transform 0.2s ease;
+}
+
+.menu .hovered #invertedcursor {
+  width: 40px;
+  height: 40px;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  justify-content: center; */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+}
+
+.menu.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  /* text-align: center; */
+}
+
+.menu li {
+  margin-bottom: 20px; /* Adjust spacing */
+}
+
+.menu a {
+  color: black; /* Adjust color */
+  text-decoration: none;
+  font-size: 24px; /* Adjust size */
+  font-weight: normal;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent; /* Adjust background */
+  color: black; /* Adjust color */
+  border: none;
+  padding: 10px;
+  cursor: none; /* Hide default cursor */
+  font-size: 24px; /* Adjust size */
+}
+
+.list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left; /* Align text to the left */
+    position: absolute; /* Position it absolutely */
+    left: 20px; /* Move to the absolute left */
+    top: 50%; /* Vertically center the list */
+    transform: translateY(-50%); /* Proper vertical centering */
+}
